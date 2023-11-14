@@ -1,0 +1,226 @@
+@import "./scss/colors";
+@import "./scss/mixins";
+@import "./scss/global";
+@import "./scss/sections";
+
+// -------------------------------------------------------------------
+/* ============= grid container ============= */
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 50px;
+    grid-template-areas:
+        'header'
+        'main'
+        'footer';
+    height: 100vh;
+}
+
+/* ============= menu icon ============= */
+.menu-icon {
+    position: fixed;
+    display: flex;
+    top: 2px;
+    left: 8px;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    cursor: pointer;
+    padding: 12px;
+    color: black;
+}
+
+/* ============= header ============= */
+.header {
+    grid-area: header;
+    background-color: whitesmoke;
+    background-color: $bg-color;
+    .header-search {
+        margin-left: 24px;
+    }
+}
+
+/* ============= aside ============= */
+.aside {
+    grid-area: aside;
+    background-color: $bg-color;
+    /* flexing aside */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 240px;
+    position: fixed;
+    overflow-y: auto;
+    z-index: 2;
+    transform: translateX(-245px);
+    overflow-y: auto;
+    &.active {
+        transform: translateX(0);
+    }
+    .aside-close-icon {
+        position: absolute;
+        visibility: visible;
+        top: 20px;
+        right: 20px;
+        cursor: pointer;
+    }
+    hgroup{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        align-content: center;
+        text-align: center;
+    }
+    menu {
+        padding: 0;
+        // margin-top: 85px;
+        list-style-type: none;
+        .aside-list-item {
+            padding: 15px 40px;
+            color: #ddd;
+            &:hover {
+                background-color: royalblue;
+                cursor: pointer;
+            }
+        }
+    }
+
+}
+
+/* ============= main ============= */
+.main {
+    grid-area: main;
+    // background-color: white;
+    // padding: 1rem;
+    overflow-y: auto;
+    /* Layout for main content overview and its cards*/
+    .main-overview {
+        .container { 
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                border-bottom: 1px solid lightgreen;
+                padding: 0;
+                .overview-card {
+                    flex-basis: 250px;
+                    flex-grow: 1;
+                    margin: 10px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 20px;
+                    /* background-color: seagreen; */
+                    height: 100px;
+                    border: 1px solid $bg-color;
+                    border-radius: 4px;
+                    // color: darkblue;
+                    .overview-card-info {
+                        background-color: unset;
+                        color: $bg-color;
+                    }
+                    .overview-card-icon {
+                        background-color: unset;
+                        color: $bg-color;
+                    }
+                }
+            }   
+        }
+    }
+    
+    /* Layout for main-cards section // below main-overview */
+    .main-cards {
+        .container{
+
+            display: grid;
+            align-items: stretch;
+            grid-template-columns: repeat(1fr) ;
+            grid-template-rows: 500px 200px 300px;
+            grid-template-areas:
+                'card1'
+                'card2'
+                'card3';
+            grid-gap: 10px;
+            .card {
+                padding: 20px;
+                border: 1px solid tomato;
+                border-radius: 4px;
+                color: tomato;
+                &:first-child {
+                    grid-area: card1;
+                }
+                &:nth-child(2) {
+                    grid-area: card2;
+                }
+                &:nth-child(3) {
+                    grid-area: card3;
+                }
+            }
+        }
+    }
+
+}
+
+/* ============= footer ============= */
+.footer {
+    grid-area: footer;
+    background-color: whitesmoke;
+    background-color: $bg-color;
+    a{
+        color: $text-color;
+    }
+}
+
+/* ============= flexing header and footer ============= */
+.header,
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: $text-color;
+    padding: 0 15px;
+}
+
+/* ============= responsive layout ============= */
+@media only screen and (min-width: 750px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        grid-template-rows: 50px 1fr 50px;
+        grid-template-areas:
+        'aside header'
+        'aside main'
+        'aside footer';
+        height: 100vh;
+    }
+    .aside-close-icon {
+        display: none;
+    }
+    .aside {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transform: translateX(0);
+
+        ul {
+            list-style: auto;
+            li{}
+        }
+    }
+    .main {
+        .main-cards {
+            .container {
+                // margin: 10px;
+                display: grid;
+                align-items: stretch;
+                grid-template-columns: 2fr 1fr;
+                grid-template-rows: 200px 300px;
+                grid-template-areas:
+                'card1 card2'
+                'card1 card3';
+                grid-gap: 10px;
+            }
+            }
+    }
+}
