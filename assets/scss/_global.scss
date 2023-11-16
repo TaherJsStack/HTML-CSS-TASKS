@@ -1,0 +1,59 @@
+/* ============= global classes and elements ============= */
+
+$font-weight: ( "regular": 400, "medium": 600, "bold": 800);
+html,
+body {
+    margin: 0;
+    padding: 0;
+    color: $text-color;
+    box-sizing: border-box;
+    font-size: 15px;
+    // font-family: monospace;
+    font-family: 'Nunito', sans-serif;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #a5a5a5;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: $bg-color;
+    border-radius: 5px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.bg-linear-grey {
+    background: linear-gradient(46deg, #414E62 53.13%, #805D5D 100%);
+}
+
+.text-center {
+    text-align: center;
+}
