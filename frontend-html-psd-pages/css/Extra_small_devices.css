@@ -1,0 +1,272 @@
+/* // Extra small devices (portrait phones, less than 576px) */
+
+@media (max-width: 575.98px) {
+    /* body{
+        background-color: rgb(8, 138, 116);
+    } */
+    .padding {
+        padding: 0px 0 5px 0;
+    }
+    h1 {
+        padding: 15px 0;
+        font-variant: all-small-caps;
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 18px;
+    }
+    p {
+        font-size: 11px;
+    }
+    .Projects .btn,
+    .About-us .btn,
+    .Services .btn,
+    .Our-Blog .btn {
+        width: 100px;
+        margin-top: 31px;
+        font-size: 11px;
+    }
+    .h1-all-page {
+        color: #fff;
+        margin-top: 61px;
+        font-size: 19px;
+    }
+    .banner {
+        height: 137px;
+    }
+    /* =========== */
+    .nav-top .brand {
+        display: none
+    }
+    .navbar-default .navbar-toggle {
+        background-color: aliceblue;
+    }
+    .navbar-brand img {
+        width: 100px;
+        margin-top: 6px;
+    }
+    .nav-top .slid {
+        display: none;
+    }
+    .nav {
+        background-color: #4dacff;
+    }
+    .nav-top .menu {
+        z-index: 30;
+    }
+    .navbar-right {
+        display: none
+    }
+    .main-nav,
+    .nav-top .slid {
+        height: 80px;
+    }
+    .About-us p {
+        padding: 0px;
+        width: 250px;
+    }
+    .nav-top .navbar-default .navbar-nav>li>a {
+        font-size: 12px;
+    }
+    .navbar-nav>li>a {
+        padding-top: 0px;
+        padding-bottom: 9px;
+    }
+    .nav-top {
+        height: unset;
+    }
+    .features .pic .img-responsive,
+    .features .center {
+        display: none;
+    }
+    .features .col-xs-10 {
+        width: 104.333333%;
+        padding: 9px;
+    }
+    .features .under-div {
+        height: auto;
+    }
+    .features .under-div div button {
+        font-size: 10px;
+    }
+    .features .under-div div h6 {
+        font-size: 11px;
+        line-height: 1.7
+    }
+    .features .under-div div button {
+        font-size: 12px;
+    }
+    .Projects .Banking img,
+    .Projects .slid {
+        display: none
+    }
+    .Projects .Real-Estate a,
+    .Projects .Banking a {
+        display: none;
+    }
+    .Projects .Real-Estate .contain,
+    .Projects .Banking .contain {
+        padding: 3px;
+        color: #fff
+    }
+    .Projects .Real-Estate .contain p {
+        color: #fff
+    }
+    .Projects .col-xs-4 {
+        padding-right: 6px;
+        padding-left: 6px;
+    }
+    .Services h3 {
+        font-weight: 100;
+    }
+    .Testimonials {
+        display: none
+    }
+    .Our-Blog .left-blog .img {
+        display: none;
+    }
+    .Our-Blog .left-blog .txt {
+        width: 100%;
+        box-shadow: inset 49px 0px 106px -64px;
+    }
+    .Our-Blog .right-blog,
+    .Our-Blog .left-blog .txt {
+        height: 202px;
+    }
+    .Our-Blog .right-blog,
+    .Our-Blog .left-blog .txt {
+        padding: 10px;
+    }
+    .Our-Blog .col-xs-4 {
+        width: 33.33333333%;
+        display: contents;
+    }
+    .Quick-contact h4 {
+        color: #4dacff;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        font-size: 13px;
+    }
+    .Quick-contact span {
+        font-size: 11px
+    }
+    .Quick-contact .Email,
+    .Quick-contact .Call-Us,
+    .Quick-contact .Career {
+        padding: 0px;
+    }
+    .Quick-contact .img {
+        width: 26%;
+        float: left;
+        padding: 10px;
+    }
+    .footer .img img {
+        display: none;
+    }
+    .footer .navigation h3,
+    .footer .Industary h3,
+    .footer .News-letter h3 {
+        font-size: 15px;
+    }
+    .footer .News-letter p,
+    .footer .navigation ul li a,
+    .footer .Industary ul li a {
+        font-weight: 100;
+        font-size: 12px;
+    }
+    .footer .navigation ul li,
+    .footer .Industary ul li {
+        padding-bottom: 3px;
+    }
+    .footer .bottom ul li {
+        display: inline;
+        float: right;
+        margin: 0 3px;
+    }
+    .footer .bottom {
+        margin-top: 8px;
+        padding-top: 11px;
+    }
+    .footer .Copyright span {
+        font-size: 11px
+    }
+    .footer .bottom ul li {
+        font-size: 11px;
+    }
+    .footer .News-letter form input[type=email] {
+        width: 170px;
+    }
+    .footer .bottom .Copyright {
+        float: initial;
+        margin-top: 10px;
+        text-align: center;
+    }
+    #up {
+        font-size: 33px;
+    }
+    /* ====================================== index page ============================================ */
+    .About-us-page .text-side .about,
+    .About-us-page .text-side .vision,
+    .About-us-page .text-side .mission {
+        padding: 5px 0 0px 0;
+    }
+    .About-us-page .video-side .consultation,
+    .About-us-page .video-side .video {
+        width: 280px;
+        height: 333px;
+    }
+    .Points .points-content .btn {
+        padding: 5px;
+        font-size: px
+    }
+    /* ====================================== About-us-page ============================================ */
+    .Industary .Industary-content .Industary-content-img img {
+        width: 100%;
+    }
+    .Industary .Industary-content .Industary-content-txt {
+        padding: 8px;
+    }
+    /* ====================================== Industary page ============================================ */
+    .Services-page h3 {
+        padding: 0px 17px;
+    }
+    .Services-page .Services-content .Services-txt {
+        padding: 1px 0px 12px 12px;
+        border: 1px solid #e4ecee;
+    }
+    .Services-page .Services-content .Services-txt .btn {
+        padding: 3px;
+        width: 25%;
+        margin-top: 0px;
+    }
+    .Services-page .Services-content .Services-txt ul li {
+        line-height: 1;
+    }
+    /* ====================================== Services page ============================================ */
+    .oops .num p {
+        font-size: 76px;
+        margin: 40px 0;
+    }
+    .oops .txt img {
+        width: 51px;
+    }
+    .oops .txt .btn {
+        padding: 5px 10px;
+        width: 34%;
+        margin: 11px;
+    }
+    /* ====================================== Pages page ============================================ */
+    .Write-to-Us .form {
+        padding: 12px;
+    }
+    .Write-to-Us .form textarea {
+        width: 100%;
+        height: 87px;
+    }
+    .Write-to-Us .form form .btn {
+        padding: 5px;
+        width: 30%;
+    }
+    /* ====================================== contact us page ============================================ */
+    /* ====================================== Industary page ============================================ */
+}
