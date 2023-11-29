@@ -9,54 +9,58 @@ body {
     font-size: 15px;
 }
 
+
 /* width */
+
 ::-webkit-scrollbar {
     width: 7px;
 }
-  
+
+
 /* Track */
+
 ::-webkit-scrollbar-track {
     background: #a5a5a5;
 }
 
+
 /* Handle */
+
 ::-webkit-scrollbar-thumb {
-    background:  $bg-color;
+    background: $bg-color;
     border-radius: 5px;
 }
 
+
 /* Handle on hover */
+
 ::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
 
+
 /* Chrome, Safari, Edge, Opera */
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
     margin: 0;
 }
-  
 
-section{
+section {
     margin-top: 2rem;
     display: grid;
     align-items: center;
     color: $text-color;
     padding: 1rem;
-
     @include border-radius(5px);
-    
-    &:nth-child(even){
+    &:nth-child(even) {
         background: #f7f7f7;
-        // .container {
-        //     padding: 1rem;
-        // }
     }
-    &.min-height-100vh{
+    &.min-height-100vh {
         min-height: 100vh;
     }
-    h1{
+    h1 {
         color: $bg-color;
     }
     .container {
@@ -64,9 +68,8 @@ section{
         display: grid;
         text-align: center;
         height: -webkit-fill-available;
-        // align-content: space-between;
         @include loop-to-set-bg2($bg-color, $bg-colors-list);
-        div{
+        div {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -77,6 +80,6 @@ section{
     }
 }
 
-.text-center{
+.text-center {
     text-align: center;
 }
