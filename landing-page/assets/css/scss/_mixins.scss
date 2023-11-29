@@ -1,0 +1,109 @@
+/* ============= Theme Mixins ============= */
+
+@mixin opacity ($opacity: 0.5) {
+    -webkit-opacity: $opacity;
+    -moz-opacity: $opacity;
+    opacity: $opacity;
+}
+
+@mixin placeholder ($color: #999) {
+    &::-webkit-input-placeholder {
+        /* WebKit browsers */
+        color: $color;
+    }
+    &:-moz-placeholder {
+        /* Mozilla Firefox 4 to 18 */
+        color: $color;
+    }
+    &::-moz-placeholder {
+        /* Mozilla Firefox 19+ */
+        color: $color;
+    }
+    &:-ms-input-placeholder {
+        /* Internet Explorer 10+ */
+        color: $color;
+    }
+}
+
+@mixin box-shadow ($shaodw) {
+    -webkit-box-shadow: $shaodw;
+    -moz-box-shadow: $shaodw;
+    box-shadow: $shaodw;
+}
+
+// border radius
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -o-border-radius: $radius;
+}
+
+// rotate
+@mixin rotate ($deg) {
+    @include transform(rotate(#{$deg}deg));
+}
+
+// scale
+@mixin scale($scale) {
+    @include transform(scale($scale));
+}
+
+// translate
+@mixin translate ($x, $y) {
+    @include transform(translate($x, $y));
+}
+
+// skew
+@mixin skew ($x) {
+    // @include transform(skew(#{$x}deg, #{$y}deg)): ;
+    transform: skew(#{$x}deg);
+    -webkit-transform: skew(#{$x}deg);
+    -moz-transform: skew(#{$x}deg);
+    -ms-transform: skew(#{$x}deg);
+    -o-transform: skew(#{$x}deg);
+}
+
+//transform origin
+@mixin transform-origin ($origin) {
+    moz-transform-origin: $origin;
+    -o-transform-origin: $origin;
+    -ms-transform-origin: $origin;
+    -webkit-transform-origin: $origin;
+    transform-origin: $origin;
+}
+
+@mixin transition ($transition) {
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+}
+
+//loop-to-set-bg
+@mixin loop-to-set-bg1 ($through, $selected-bg-color) {
+    @for $i from 1 through $through {
+        div:nth-of-type(#{$i}) {
+            background-color: lighten($selected-bg-color, $i * 5%);
+        }
+    }
+}
+
+//loop-to-set-bg
+@mixin loop-to-set-bg2 ($selected-bg-color, $list) {
+    @for $i from 1 through length($list) {
+        $color: nth($list, $i);
+        div:nth-child(#{$i}) {
+            background: $color;
+        }
+        ;
+    }
+}
+
+@mixin center-by-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

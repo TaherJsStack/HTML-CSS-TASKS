@@ -1,0 +1,318 @@
+/* *********************** FONTS ********************** */
+
+@font-face {
+    font-family: PlainBold;
+    src: url(../fonts/Plain-Bold.woff);
+}
+
+@font-face {
+    font-family: PlainLight;
+    src: url(../fonts/Plain-Light.woff);
+}
+
+@font-face {
+    font-family: PlainRegular;
+    src: url(../fonts/Plain-Regular.woff);
+}
+
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('https://use.fontawesome.com/releases/v5.0.6/css/all.css');
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: PlainRegular;
+}
+
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+/* width */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: #a5a5a5;
+}
+
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: $app-primary;
+    border-radius: 5px;
+}
+
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+/* Chrome, Safari, Edge, Opera */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+/*---------------------------------------
+     TYPOGRAPHY              
+  -----------------------------------------*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: $title-font-family;
+    line-height: inherit;
+}
+
+h1 {
+    color: $title-color;
+    font-size: $h1-font-size;
+}
+
+h2 {
+    font-size: $h2-font-size;
+    font-weight: 100;
+}
+
+h3 {
+    font-size: $h3-font-size;
+    font-weight: 100;
+    margin-bottom: 0;
+}
+
+h4 {
+    color: $color-primary;
+    font-family: $base-font-family;
+    font-size: $p-font-size;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+p {
+    color: $color-primary;
+    font-size: $p-font-size;
+    line-height: 1.5em;
+    margin-bottom: 0;
+}
+
+b,
+strong {
+    letter-spacing: 0;
+    color: $secondary-color;
+}
+
+figure {
+    margin-bottom: 0;
+}
+
+
+/*---------------------------------------
+     GLOBAL CLASSES              
+  -----------------------------------------*/
+
+.btn {
+    line-height: 2;
+}
+
+button {
+    box-shadow: none;
+}
+
+.custom-btn {
+    padding: 0;
+    margin: 0;
+    width: 176px;
+    height: 48px;
+    line-height: 43px;
+    color: $app-primary;
+    font-family: PlainRegular;
+    background-color: transparent;
+    border: 1px solid $app-primary;
+    @include border-radius(8px);
+    &:hover {
+        background-color: $app-primary;
+        color: $app-primary;
+    }
+}
+
+.owl-carousel {
+    position: relative;
+    .owl-stage-outer {
+        direction: ltr;
+        padding-top: 5rem;
+        padding-top: 3rem;
+        .owl-stage {
+            .owl-item {
+                @extend %center-by-flex;
+            }
+        }
+    }
+    .owl-nav {
+        display: flex;
+        position: absolute;
+        top: -6rem;
+        right: 0;
+        width: 13%;
+        justify-content: space-between;
+        [class*=owl-] {
+            &:hover {
+                background-color: unset;
+                background: unset;
+                color: unset;
+            }
+        }
+        button {
+            margin: 0 !important;
+            line-height: 0px;
+            &:hover {
+                background-color: unset;
+            }
+            span {
+                font-size: 30px;
+                &:hover {
+                    background-color: unset;
+                }
+            }
+        }
+    }
+    .owl-dots {
+        position: absolute;
+        top: -4.7rem;
+        right: 1rem;
+        width: 10rem;
+        margin: 0;
+        // background-color: $app-primary;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .owl-dot {
+            // border: 1px solid green;
+            button {
+                width: 4px;
+                height: 4px;
+                margin: 0 7px;
+                background-color: transparent !important;
+            }
+            span {
+                margin: 0 !important;
+                width: 40px !important;
+                height: 40px !important;
+                background-image: url(../images/icon/leaf.png);
+                background-color: transparent;
+                background-position: center;
+                background-size: 11px;
+                background-repeat: no-repeat;
+                border: 1px solid green;
+                &:hover {
+                    background-color: transparent;
+                    background-image: url(../images/icon/leaf.png);
+                    background-color: transparent;
+                    background-position: center;
+                    background-size: 11px;
+                    background-repeat: no-repeat;
+                }
+            }
+            &.active {
+                span {
+                    width: 45px !important;
+                    height: 45px !important;
+                    background-image: url(../images/icon/leaf.png);
+                    background-color: transparent;
+                    background-position: center;
+                    background-size: 13px;
+                    background-repeat: no-repeat;
+                    background-color: transparent !important;
+                }
+            }
+        }
+    }
+}
+
+section {
+    padding: 5rem 0;
+    .section-head {
+        .sub-title {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            span {
+                background-image: url(../images/icon/leaf-1-1.png);
+                width: 20px;
+                height: 20px;
+                background-repeat: no-repeat;
+                background-position: center;
+                background-size: 85%;
+            }
+            h6 {
+                color: $color-secondary;
+                font-family: PlainRegular;
+                text-transform: capitalize;
+            }
+        }
+    }
+    .title {
+        font-size: 32px;
+        margin-bottom: 3rem;
+        color: $color-secondary;
+        font-family: PlainBold;
+        text-transform: capitalize;
+    }
+    .section-footer {
+        .strip-image {
+            margin-top: 4rem;
+            position: relative;
+            @extend %center-by-flex;
+            &::after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-image: url(../images/icon/bg-border-choose.png);
+                background-position: center;
+                background-repeat-y: no-repeat;
+            }
+            img {
+                background: #fff;
+                position: relative;
+                z-index: 999;
+                padding: 0px 13px;
+                margin: 7px 13px;
+                @include border-radius($border-radius-large);
+            }
+        }
+        picture {
+            @extend %center-by-flex;
+            img {
+                @extend %center-by-flex;
+                width: 150px;
+                height: 150px;
+            }
+        }
+    }
+}

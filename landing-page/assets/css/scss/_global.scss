@@ -1,0 +1,19 @@
+/* ============= global classes and elements ============= */
+
+$darkeTheme: false;
+// if not use at any html file
+// just used as sourc
+%share-class-value-color {
+    color: if($darkeTheme, $app-primary, $app-secondary) !important;
+}
+
+%paragraph {
+    font-size: 20px;
+    text-align: center;
+    color: $color-primary;
+    font-family: PlainLight;
+}
+
+%center-by-flex {
+    @include center-by-flex()
+}
